@@ -1,26 +1,18 @@
 package npr;
 
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.xy.XYDataset;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class NPR {
     JPanel myCycleCard; //
     private Object[][] baseTable;
+    private Object[][] phaseTable;
 
     private JComboBox typeCervixValue;
     private JComboBox statusCervixValue;
@@ -43,14 +35,17 @@ public class NPR {
     private JLabel cyclePhase;
     private JLabel ovulation;
     private JLabel nextPeriod;
-    private JPanel charView;
     private JButton usuńDaneButton;
     private JButton czyśćWykresButton;
     private JTextField hour;
     private JPanel hourText;
     private JButton gerChart;
+    private JLabel shortestCycle;
+    private JTextField shortestValue;
+    private JLabel phaseInfo;
 
 
+    //JOptionPane.showMessageDialog(frame, "Jajka nie powinny być zielone.");
     NPR() {
         gerChart.addMouseListener(new MouseAdapter() {
             @Override
@@ -129,5 +124,30 @@ public class NPR {
             m.insertRow(count, object);
             count++;
         }
+    }
+
+    private void phaseCycle(){
+
+    }
+
+    private void ovulationDate(){
+
+    }
+
+    private void periodDate(){
+
+        int valueCycle = parseInt(shortestValue.getText());
+
+        //valuesCycle - ostatni dzień zapełnionej kolumny
+        //wyświetlanie
+    }
+
+    public void importData(Object[][] tableData){
+        this.baseTable = tableData;
+        this.updateTable();
+    }
+
+    public Object[][] getBaseTable() {
+        return baseTable;
     }
 }
