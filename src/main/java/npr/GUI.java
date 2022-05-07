@@ -1,29 +1,32 @@
 package npr;
 
-
-import org.jfree.chart.ChartUtils;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.*;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class GUI {
+    private NPR npr;
 
     GUI() {
-        JMenu menu, save;
-        JMenuItem newFile, open, jpg, csv;
+        JMenu menu;
+        JMenu save;
+        final JMenuItem newFile, open, jpg, csv;
         JMenuItem help;
 
+        this.npr = new NPR();
         JFrame frame = new JFrame("NPR");
         JMenuBar menuBar = new JMenuBar();
 
         frame.setJMenuBar(menuBar);
         frame.setSize(600, 600);
         frame.setLayout(null);
-        frame.setContentPane(new NPR().myCycleCard);
+
+        frame.setContentPane(this.npr.myCycleCard);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -51,32 +54,53 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //otworz plik csv
+                //Najpierw odczytamy rekordy wiersz po wierszu, używając funkcji readLine()  w BufferedReader .
+                //
+                //Następnie podzielimy linię na tokeny na podstawie separatora przecinków:
+
+                List<Object[]> records = new ArrayList<>();
+                try (BufferedReader br = new BufferedReader(new FileReader("npr.csv"))) {
+                    String line;
+                    while ((line = br.readLine()) != null) {
+                        String[] values = line.split(";");
+                        records.add(values);
+                    }
+
+                    npr.importData(records.toArray(new Object[0][0]));
+                    JOptionPane.showMessageDialog(null, "Wczytano");
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Błąd pliku");
+                }
+
+
             }
         });
 
         csv.addActionListener(new ActionListener() { //przekazanie Object[][] table
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*zapisz csv
-
-                String filepath = "npr.csv";
+                //zapisz csv
 
                 try {
-                    FileWriter fw = new FileWriter(filepath, true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    PrintWriter pw = new PrintWriter(bw);
+                    FileWriter fw = new FileWriter("npr.csv");
+                    String csv = "";
 
-                    pw.println();
-                    pw.flush();
-                    pw.close();
+                    Object[][] table = npr.getBaseTable();
+                    for (int i = 0; i < table.length; i++) {
+                        for(int j = 0; j < table[i].length; j++) {
+                            String del = j < table[i].length - 1 ? ";" : "";
+
+                            csv += table[i][j].toString() + del;
+                        }
+                        csv += i < table.length - 1 ? "\n" : "";
+                    }
 
 
+                    fw.close();
                     JOptionPane.showMessageDialog(null, "Zapisano");
-
                 } catch (IOException ex) {
-
                     JOptionPane.showMessageDialog(null, "Nie zapisano");
-                }*/
+                }
 
             }
         });

@@ -42,8 +42,6 @@ public class Chart extends ApplicationFrame {
 
         final XYPlot plot = xylineChart.getXYPlot();
 
-        //NumberAxis xAxis = (NumberAxis)plot.getDomainAxis();
-        //xAxis.setTickUnit(new NumberTickUnit(1));
 
         NumberAxis domain = (NumberAxis) plot.getDomainAxis();
         domain.setRange(1  , 31);
@@ -52,7 +50,6 @@ public class Chart extends ApplicationFrame {
         NumberAxis range = (NumberAxis) plot.getRangeAxis();
         range.setRange(36.00  , 40.00);
         range.setTickUnit(new NumberTickUnit(0.5));
-
 
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
 
@@ -81,7 +78,7 @@ public class Chart extends ApplicationFrame {
     }
 
 
-    public static void main(Object[][] table) throws Exception {
+    public static void jpg(Object[][] table) throws Exception {
 
         final XYSeries npr = new XYSeries("Temperatura");
 
