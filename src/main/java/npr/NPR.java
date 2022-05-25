@@ -23,6 +23,9 @@ public class NPR {
     private JComboBox otherValue;
     private JComboBox levelCervixValue;
     private JComboBox MucusValue;
+    private JLabel mucus;
+    private JLabel Cervix;
+    private JLabel other;
     private JCheckBox periodCheckBox;
     private JButton saveDaneButton;
     private JButton dataButton;
@@ -30,25 +33,41 @@ public class NPR {
     private JTextField hourData;
     private JTextField tempValue;
     private JPanel saveData;
+    private JLabel cycleDay;
+    private JLabel lenghtCycleFirst;
     private JButton deleteDaneButton;
     private JTextField hour;
+    private JPanel hourText;
     private JButton gerChart;
+    private JLabel shortestCycle;
     private JTextField shortestValue;
     private JLabel dayInfo;
     private JLabel phaseFirstLenght;
-    private JPanel hourText;
-    private JLabel mucus;
-    private JLabel other;
-    private JLabel Cervix;
-    private JLabel cycleDay;
-    private JLabel lenghtCycleFirst;
-    private JLabel shortestCycle;
 
 
     NPR() {
 
+       //intensityPeriodValue.setEnabled(periodCheckBox.isSelected());
+       // colorPeriod.setEnabled(periodCheckBox.isSelected());
 
-        firstStatusPeriod();
+
+        periodCheckBox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+
+                if (periodCheckBox.isSelected()) {
+
+                    intensityPeriodValue.setEnabled(true);
+                    colorPeriod.setEnabled(true);
+
+                } else {
+                    intensityPeriodValue.setEnabled(false);
+                    colorPeriod.setEnabled(false);
+                }
+            }
+        });
+
+
 
 
         gerChart.addMouseListener(new MouseAdapter() {
@@ -67,6 +86,7 @@ public class NPR {
                 {"Inne"},
         };
         this.updateTable();
+
 
 
         dataButton.addActionListener(new ActionListener() {
@@ -93,7 +113,7 @@ public class NPR {
                         (String) statusCervixValue.getSelectedItem(),
                         (String) otherValue.getSelectedItem()
                 };
-                updateTableData(dataList); //aktualizacja tabeli
+                updateTableData(dataList);//aktualizacja tabeli
                 phaseCycle();
                 dayCycle();
             }
@@ -161,22 +181,6 @@ public class NPR {
 
     public Object[][] getBaseTable() {
         return baseTable;
-    }
-
-    private void firstStatusPeriod() {
-
-/*
-        if (periodCheckBox.isSelected()) {
-
-            intensityPeriodValue.setEnabled(true);
-            colorPeriod.setEnabled(true);
-
-        } else {
-            intensityPeriodValue.setEnabled(false);
-            colorPeriod.setEnabled(false);
-        }
-*/
-
     }
 
     private void phaseCycle() {
