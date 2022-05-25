@@ -23,7 +23,7 @@ public class GUI {
         JMenuBar menuBar = new JMenuBar();
 
         frame.setJMenuBar(menuBar);
-        frame.setSize(600, 600);
+        frame.setSize(800, 800);
         frame.setLayout(null);
 
         frame.setContentPane(this.npr.myCycleCard);

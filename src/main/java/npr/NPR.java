@@ -2,6 +2,7 @@ package npr;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,9 +23,6 @@ public class NPR {
     private JComboBox otherValue;
     private JComboBox levelCervixValue;
     private JComboBox MucusValue;
-    private JLabel mucus;
-    private JLabel Cervix;
-    private JLabel other;
     private JCheckBox periodCheckBox;
     private JButton saveDaneButton;
     private JButton dataButton;
@@ -32,30 +30,25 @@ public class NPR {
     private JTextField hourData;
     private JTextField tempValue;
     private JPanel saveData;
-    private JLabel cycleDay;
-    private JLabel lenghtCycleFirst;
     private JButton deleteDaneButton;
     private JTextField hour;
-    private JPanel hourText;
     private JButton gerChart;
-    private JLabel shortestCycle;
     private JTextField shortestValue;
     private JLabel dayInfo;
+    private JLabel phaseFirstLenght;
+    private JPanel hourText;
+    private JLabel mucus;
+    private JLabel other;
+    private JLabel Cervix;
+    private JLabel cycleDay;
+    private JLabel lenghtCycleFirst;
+    private JLabel shortestCycle;
 
 
     NPR() {
 
+
         firstStatusPeriod();
-
-
-        /*checkbox
-
-        periodCheckBox.getSelectedIcon();
-
-            intensityPeriodValue.setEnabled(true);
-            colorPeriod.setEnabled(true);
-        */
-
 
 
         gerChart.addMouseListener(new MouseAdapter() {
@@ -117,10 +110,12 @@ public class NPR {
                     return;
                 }
                 for (int i = 0; i < baseTable.length; i++) {
-                    for (int j = 0; j < baseTable[i].length; j++) {
-                        // del[i][j] =
+                    for (int j = 0; j < baseTable[i].length-1; j++) {
+                        del[i][j] = baseTable[i][j];
                     }
                 }
+                baseTable = del;
+                updateTable();
             }
         });
     }
@@ -170,15 +165,24 @@ public class NPR {
 
     private void firstStatusPeriod() {
 
-        intensityPeriodValue.setEnabled(false);
-        colorPeriod.setEnabled(false);
+/*
+        if (periodCheckBox.isSelected()) {
+
+            intensityPeriodValue.setEnabled(true);
+            colorPeriod.setEnabled(true);
+
+        } else {
+            intensityPeriodValue.setEnabled(false);
+            colorPeriod.setEnabled(false);
+        }
+*/
 
     }
 
     private void phaseCycle() {
 
-        int valueCycle = parseInt(shortestValue.getText());
-        lenghtCycleFirst.setText(String.valueOf(valueCycle));
+        int valueCycle = parseInt(shortestValue.getText()) - 20;
+        phaseFirstLenght.setText(String.valueOf(valueCycle));
     }
 
 
