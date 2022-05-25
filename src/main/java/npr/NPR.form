@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="4a1eb" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="4a1eb" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -34,7 +34,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="88bd3" binding="hourText" layout-manager="GridLayoutManager" row-count="5" column-count="17" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="88bd3" binding="hourText" layout-manager="GridLayoutManager" row-count="5" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -42,78 +42,6 @@
                 <properties/>
                 <border type="none" title="Dane"/>
                 <children>
-                  <component id="43bff" class="javax.swing.JLabel" binding="other">
-                    <constraints>
-                      <grid row="2" column="7" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <preferred-size width="15" height="16"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Inne"/>
-                    </properties>
-                  </component>
-                  <component id="b4984" class="javax.swing.JComboBox" binding="otherValue">
-                    <constraints>
-                      <grid row="3" column="7" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <model>
-                        <item value="BO"/>
-                        <item value="P"/>
-                        <item value="X"/>
-                        <item value="(.)"/>
-                        <item value="póź"/>
-                        <item value="alk"/>
-                        <item value="-"/>
-                      </model>
-                    </properties>
-                  </component>
-                  <component id="1620e" class="javax.swing.JComboBox" binding="typeCervixValue">
-                    <constraints>
-                      <grid row="3" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <model>
-                        <item value="miękka"/>
-                        <item value="średnia"/>
-                        <item value="twarda"/>
-                        <item value="-"/>
-                      </model>
-                    </properties>
-                  </component>
-                  <component id="cbae8" class="javax.swing.JComboBox" binding="levelCervixValue">
-                    <constraints>
-                      <grid row="3" column="11" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <model>
-                        <item value="nisko"/>
-                        <item value="średnio"/>
-                        <item value="wysoko"/>
-                        <item value="-"/>
-                      </model>
-                    </properties>
-                  </component>
-                  <component id="70c94" class="javax.swing.JLabel" binding="Cervix">
-                    <constraints>
-                      <grid row="2" column="10" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Szyjka macicy"/>
-                    </properties>
-                  </component>
-                  <component id="88e99" class="javax.swing.JComboBox" binding="statusCervixValue">
-                    <constraints>
-                      <grid row="3" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <model>
-                        <item value="otwarta"/>
-                        <item value="zamknięta"/>
-                        <item value="-"/>
-                      </model>
-                    </properties>
-                  </component>
                   <component id="9954c" class="javax.swing.JTextField" binding="tempValue">
                     <constraints>
                       <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -130,98 +58,127 @@
                       <text value="PTC"/>
                     </properties>
                   </component>
-                  <component id="b10ae" class="javax.swing.JComboBox" binding="intensityPeriodValue">
+                  <component id="97944" class="javax.swing.JLabel" binding="cycleDay">
                     <constraints>
-                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <model>
-                        <item value="Słabe"/>
-                        <item value="Średnie"/>
-                        <item value="Mocne"/>
-                        <item value="-"/>
-                      </model>
+                      <text value="Dzień cyklu"/>
                     </properties>
                   </component>
-                  <component id="2bebc" class="javax.swing.JComboBox" binding="colorPeriod">
+                  <component id="2140e" class="javax.swing.JLabel" binding="dayInfo">
                     <constraints>
-                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <model>
-                        <item value="Jasnoczerwony"/>
-                        <item value="Czerwony"/>
-                        <item value="Ciemnoczerwony"/>
-                        <item value="Brunatny"/>
-                        <item value="Plamienia"/>
-                        <item value="-"/>
-                      </model>
-                    </properties>
-                  </component>
-                  <component id="b170c" class="javax.swing.JCheckBox" binding="okresCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Okres"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="a98ff" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Godzina"/>
                     </properties>
                   </component>
-                  <component id="97944" class="javax.swing.JLabel" binding="cyclePhase">
+                  <component id="fb2db" class="javax.swing.JTextField" binding="hour">
                     <constraints>
-                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="20" height="-1"/>
+                      </grid>
                     </constraints>
                     <properties>
-                      <text value="Faza cyklu"/>
+                      <text value=""/>
                     </properties>
                   </component>
-                  <component id="f3f0e" class="javax.swing.JLabel" binding="ovulation">
+                  <component id="64f28" class="javax.swing.JButton" binding="dataButton" default-binding="true">
                     <constraints>
-                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Do owulacji"/>
+                      <text value="Data"/>
                     </properties>
                   </component>
-                  <component id="8e340" class="javax.swing.JLabel" binding="nextPeriod">
+                  <component id="84890" class="javax.swing.JTextField" binding="hourData">
                     <constraints>
-                      <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="20" height="-1"/>
+                      </grid>
                     </constraints>
                     <properties>
-                      <text value="Do następnego krwawienia"/>
+                      <text value=""/>
                     </properties>
                   </component>
-                  <grid id="548fc" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
+                  <component id="72405" class="javax.swing.JLabel" binding="shortestCycle">
                     <constraints>
-                      <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Najkrótszy cykl"/>
+                    </properties>
+                  </component>
+                  <component id="d334b" class="javax.swing.JTextField" binding="shortestValue">
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
                     </constraints>
                     <properties/>
-                    <border type="none"/>
-                    <children/>
-                  </grid>
-                  <grid id="65af" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
+                  </component>
+                  <component id="b170c" class="javax.swing.JCheckBox" binding="periodCheckBox">
                     <constraints>
-                      <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
-                    <border type="none"/>
-                    <children/>
-                  </grid>
-                  <component id="7a0b2" class="javax.swing.JComboBox" binding="MucusValue">
+                    <properties>
+                      <text value="Okres"/>
+                    </properties>
+                  </component>
+                  <component id="2bebc" class="javax.swing.JComboBox" binding="colorPeriod">
                     <constraints>
-                      <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <model>
+                        <item value="-"/>
+                        <item value="Jasnoczerwony"/>
+                        <item value="Czerwony"/>
+                        <item value="Ciemnoczerwony"/>
+                        <item value="Brunatny"/>
+                        <item value="Plamienia"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="b10ae" class="javax.swing.JComboBox" binding="intensityPeriodValue">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="-"/>
+                        <item value="Słabe"/>
+                        <item value="Średnie"/>
+                        <item value="Mocne"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="7ad2" class="javax.swing.JLabel" binding="mucus">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="15" height="16"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <text value=" Śluz"/>
+                    </properties>
+                  </component>
+                  <component id="7a0b2" class="javax.swing.JComboBox" binding="MucusValue">
+                    <constraints>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="-"/>
                         <item value="∅"/>
                         <item value="su"/>
                         <item value="c"/>
@@ -238,123 +195,129 @@
                         <item value="szk"/>
                         <item value="pł"/>
                         <item value="mś"/>
-                        <item value="-"/>
                       </model>
                     </properties>
                   </component>
-                  <component id="7ad2" class="javax.swing.JLabel" binding="mucus">
+                  <component id="43bff" class="javax.swing.JLabel" binding="other">
                     <constraints>
-                      <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <preferred-size width="15" height="16"/>
                       </grid>
                     </constraints>
                     <properties>
-                      <text value=" Śluz"/>
+                      <text value="Inne"/>
                     </properties>
                   </component>
-                  <component id="fb2db" class="javax.swing.JTextField" binding="hour">
+                  <component id="8e340" class="javax.swing.JLabel" binding="lenghtCycleFirst">
                     <constraints>
-                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="20" height="-1"/>
-                      </grid>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value=""/>
+                      <text value="Długość fazy względnej"/>
                     </properties>
                   </component>
-                  <component id="84890" class="javax.swing.JTextField" binding="hourData">
+                  <grid id="548fc" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
-                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="20" height="-1"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="64f28" class="javax.swing.JButton" binding="dataButton" default-binding="true">
-                    <constraints>
-                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Data"/>
-                    </properties>
-                  </component>
-                  <component id="72405" class="javax.swing.JLabel" binding="shortestCycle">
-                    <constraints>
-                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Najkrótszy cykl"/>
-                    </properties>
-                  </component>
-                  <component id="d334b" class="javax.swing.JTextField" binding="shortestValue">
-                    <constraints>
-                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="-1"/>
-                      </grid>
+                      <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
-                  </component>
-                  <component id="2140e" class="javax.swing.JLabel" binding="phaseInfo">
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <component id="b4984" class="javax.swing.JComboBox" binding="otherValue">
                     <constraints>
-                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <model>
+                        <item value="-"/>
+                        <item value="BO"/>
+                        <item value="P"/>
+                        <item value="X"/>
+                        <item value="(.)"/>
+                        <item value="póź"/>
+                        <item value="alk"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="70c94" class="javax.swing.JLabel" binding="Cervix">
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Szyjka macicy"/>
+                    </properties>
+                  </component>
+                  <component id="1620e" class="javax.swing.JComboBox" binding="typeCervixValue">
+                    <constraints>
+                      <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="-"/>
+                        <item value="miękka"/>
+                        <item value="średnia"/>
+                        <item value="twarda"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="cbae8" class="javax.swing.JComboBox" binding="levelCervixValue">
+                    <constraints>
+                      <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="-"/>
+                        <item value="nisko"/>
+                        <item value="średnio"/>
+                        <item value="wysoko"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="88e99" class="javax.swing.JComboBox" binding="statusCervixValue">
+                    <constraints>
+                      <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value="-"/>
+                        <item value="otwarta"/>
+                        <item value="zamknięta"/>
+                      </model>
+                    </properties>
+                  </component>
+                  <component id="a8555" class="javax.swing.JButton" binding="saveDaneButton">
+                    <constraints>
+                      <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Zapisz dane"/>
+                    </properties>
+                  </component>
+                  <component id="bce90" class="javax.swing.JButton" binding="deleteDaneButton">
+                    <constraints>
+                      <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Usuń dane"/>
+                    </properties>
+                  </component>
+                  <component id="92a5c" class="javax.swing.JButton" binding="gerChart">
+                    <constraints>
+                      <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Generuj wykres"/>
                     </properties>
                   </component>
                 </children>
               </grid>
             </children>
           </grid>
-          <grid id="95ce3" binding="saveData" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="1612" height="57"/>
-              </grid>
-            </constraints>
-            <properties/>
-            <border type="none" title="Zapisywanie danych"/>
-            <children>
-              <component id="a8555" class="javax.swing.JButton" binding="zapiszDaneButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Zapisz dane"/>
-                </properties>
-              </component>
-              <component id="92a5c" class="javax.swing.JButton" binding="gerChart">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Generuj wykres"/>
-                </properties>
-              </component>
-              <component id="bce90" class="javax.swing.JButton" binding="usuńDaneButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Usuń dane"/>
-                </properties>
-              </component>
-              <component id="2ec30" class="javax.swing.JButton" binding="czyśćWykresButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Czyść wykres"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
           <scrollpane id="50fd9">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="1612" height="428"/>
               </grid>
             </constraints>

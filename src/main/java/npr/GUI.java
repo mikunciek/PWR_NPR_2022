@@ -95,8 +95,9 @@ public class GUI {
                         csv += i < table.length - 1 ? "\n" : "";
                     }
 
-
+                    fw.write(csv); //
                     fw.close();
+
                     JOptionPane.showMessageDialog(null, "Zapisano");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(null, "Nie zapisano");
@@ -109,9 +110,12 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-
-                File chartFile = new File("XYLineChart.jpeg");
-
+                try {
+                    Chart.jpg(npr.getBaseTable());
+                    JOptionPane.showMessageDialog(null, "Zapisano");
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Nie zapisano");
+                }
             }
         });
 

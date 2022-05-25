@@ -25,28 +25,39 @@ public class NPR {
     private JLabel mucus;
     private JLabel Cervix;
     private JLabel other;
-    private JCheckBox okresCheckBox;
-    private JButton zapiszDaneButton;
+    private JCheckBox periodCheckBox;
+    private JButton saveDaneButton;
     private JButton dataButton;
     private JTable tablePeriod;
     private JTextField hourData;
     private JTextField tempValue;
     private JPanel saveData;
-    private JLabel cyclePhase;
-    private JLabel ovulation;
-    private JLabel nextPeriod;
-    private JButton usuńDaneButton;
-    private JButton czyśćWykresButton;
+    private JLabel cycleDay;
+    private JLabel lenghtCycleFirst;
+    private JButton deleteDaneButton;
     private JTextField hour;
     private JPanel hourText;
     private JButton gerChart;
     private JLabel shortestCycle;
     private JTextField shortestValue;
-    private JLabel phaseInfo;
+    private JLabel dayInfo;
 
 
-    //JOptionPane.showMessageDialog(frame, "Jajka nie powinny być zielone.");
     NPR() {
+
+        firstStatusPeriod();
+
+
+        /*checkbox
+
+        periodCheckBox.getSelectedIcon();
+
+            intensityPeriodValue.setEnabled(true);
+            colorPeriod.setEnabled(true);
+        */
+
+
+
         gerChart.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {//wydarzenie gdy klinięcie myszki
@@ -57,7 +68,7 @@ public class NPR {
             }
         });
 
-        this.baseTable = new Object[][]{{"Data"},{"Godzina_pomiaru"}, {"Temperatura"},
+        this.baseTable = new Object[][]{{"Data"}, {"Godzina_pomiaru"}, {"Temperatura"},
                 {"Okres"}, {"Kolor_krwawienia"}, {"Intensywność_krwawienia"}, {"Śluz"},
                 {"Szyjka_macicy_status"}, {"Szyjka_macicy_położenie"}, {"Szyjka_macicy_typ"},
                 {"Inne"},
@@ -71,7 +82,7 @@ public class NPR {
                 hourData.setText(new DatePicker(saveData).setPickedDate());
             }
         });
-        zapiszDaneButton.addMouseListener(new MouseAdapter() {
+        saveDaneButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {//wydarzenie gdy klinięcie myszki
                 super.mouseClicked(e);
@@ -80,7 +91,7 @@ public class NPR {
                         hourData.getText(),
                         hour.getText(),
                         tempValue.getText(),
-                        okresCheckBox.isSelected() ? "+" : "",
+                        periodCheckBox.isSelected() ? "+" : "",
                         (String) colorPeriod.getSelectedItem(),
                         (String) intensityPeriodValue.getSelectedItem(),
                         (String) MucusValue.getSelectedItem(),
@@ -90,6 +101,26 @@ public class NPR {
                         (String) otherValue.getSelectedItem()
                 };
                 updateTableData(dataList); //aktualizacja tabeli
+                phaseCycle();
+                dayCycle();
+            }
+        });
+
+        deleteDaneButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {//wydarzenie gdy klinięcie myszki
+                super.mouseClicked(e);
+
+                Object[][] del = new Object[baseTable.length][baseTable[0].length - 1];
+
+                if (baseTable[0].length == 1) {
+                    return;
+                }
+                for (int i = 0; i < baseTable.length; i++) {
+                    for (int j = 0; j < baseTable[i].length; j++) {
+                        // del[i][j] =
+                    }
+                }
             }
         });
     }
@@ -124,25 +155,11 @@ public class NPR {
             m.insertRow(count, object);
             count++;
         }
-    }
-
-    private void phaseCycle(){
+        dayCycle();
 
     }
 
-    private void ovulationDate(){
-
-    }
-
-    private void periodDate(){
-
-        int valueCycle = parseInt(shortestValue.getText());
-
-        //valuesCycle - ostatni dzień zapełnionej kolumny
-        //wyświetlanie
-    }
-
-    public void importData(Object[][] tableData){
+    public void importData(Object[][] tableData) {
         this.baseTable = tableData;
         this.updateTable();
     }
@@ -150,4 +167,27 @@ public class NPR {
     public Object[][] getBaseTable() {
         return baseTable;
     }
+
+    private void firstStatusPeriod() {
+
+        intensityPeriodValue.setEnabled(false);
+        colorPeriod.setEnabled(false);
+
+    }
+
+    private void phaseCycle() {
+
+        int valueCycle = parseInt(shortestValue.getText());
+        lenghtCycleFirst.setText(String.valueOf(valueCycle));
+    }
+
+
+    private void dayCycle() {
+
+        int day = baseTable[0].length - 1;
+        dayInfo.setText(String.valueOf(day));
+
+    }
+
+
 }
