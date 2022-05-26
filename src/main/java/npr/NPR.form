@@ -64,7 +64,9 @@
                   </component>
                   <component id="7a0b2" class="javax.swing.JComboBox" binding="MucusValue">
                     <constraints>
-                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -98,7 +100,9 @@
                   </component>
                   <component id="1620e" class="javax.swing.JComboBox" binding="typeCervixValue">
                     <constraints>
-                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -183,7 +187,7 @@
                       <text value="Faza względna"/>
                     </properties>
                   </component>
-                  <component id="179b1" class="javax.swing.JLabel" binding="phaseFirstLenght">
+                  <component id="179b1" class="javax.swing.JLabel" binding="phaseFirstLength">
                     <constraints>
                       <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -193,7 +197,9 @@
                   </component>
                   <component id="88e99" class="javax.swing.JComboBox" binding="statusCervixValue">
                     <constraints>
-                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -205,7 +211,9 @@
                   </component>
                   <component id="cbae8" class="javax.swing.JComboBox" binding="levelCervixValue">
                     <constraints>
-                      <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -228,7 +236,9 @@
                   </component>
                   <component id="b4984" class="javax.swing.JComboBox" binding="otherValue">
                     <constraints>
-                      <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -262,7 +272,9 @@
                   </component>
                   <component id="2bebc" class="javax.swing.JComboBox" binding="colorPeriod">
                     <constraints>
-                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -277,7 +289,9 @@
                   </component>
                   <component id="b10ae" class="javax.swing.JComboBox" binding="intensityPeriodValue">
                     <constraints>
-                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <model>
@@ -306,7 +320,9 @@
                   </component>
                   <component id="92a5c" class="javax.swing.JButton" binding="gerChart">
                     <constraints>
-                      <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="51" height="30"/>
+                      </grid>
                     </constraints>
                     <properties>
                       <text value="Generuj wykres"/>
@@ -317,6 +333,22 @@
                       <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
+                  <component id="b1e35" class="javax.swing.JLabel" binding="whatPhase">
+                    <constraints>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Faza cyklu"/>
+                    </properties>
+                  </component>
+                  <component id="44abc" class="javax.swing.JLabel" binding="whatPhaseValue">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
               <grid id="d9665" layout-manager="GridLayoutManager" row-count="11" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
