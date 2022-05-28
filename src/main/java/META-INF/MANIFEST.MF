@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: npr.GUI
+
+Created-By: Apache Maven ${maven.version}
+Build-Jdk: $17
+Main-Class: npr.GUI
+Class-Path: plexus-utils-1.1.jar commons-lang-2.1.jar
+
