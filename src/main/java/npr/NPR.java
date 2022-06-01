@@ -227,9 +227,12 @@ public class NPR {
         if(periodCheckBox.isSelected()){
             whatPhaseValue.setText("Okres");
         }else {
-            if (day < 8){
+            if (8< day && day < 12) {
                 whatPhaseValue.setText("Faza płodności");
-            }else{
+            }else if (12 < day && day < 16){
+                whatPhaseValue.setText("Owulacja?");
+            }
+            else if (17 < day){
                 whatPhaseValue.setText("Faza niepłodności");
             }
 
