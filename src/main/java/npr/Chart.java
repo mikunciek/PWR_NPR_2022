@@ -51,7 +51,7 @@ public class Chart extends ApplicationFrame {
         domain.setTickUnit(new NumberTickUnit(1));
         domain.setVerticalTickLabels(true);
         NumberAxis range = (NumberAxis) plot.getRangeAxis();
-        range.setRange(36.00, 40.00);
+        range.setRange(36.00, 38.00);
         range.setTickUnit(new NumberTickUnit(0.5));
 
         //kolor linii na wykresie
